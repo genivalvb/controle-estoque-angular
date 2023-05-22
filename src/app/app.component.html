@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand -->
+  <a class="navbar-brand" href="#">Logo</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="items"  class="nav-link"> Lista de Items</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="people"  class="nav-link"> Lista de Usuários</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="stock"  class="nav-link"> Estoque</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="movement"  class="nav-link"> Movimentação</a>
+        </li>
+    </ul>
+  </nav>
+
+<h1 class="text-center"> Interface Consumidora da API: ControleEstoqueAPI </h1>
+<h5 class="text-center">Essa interface se comunica com uma API de Controle de Estoque para buscar e carregar informações sobre estoque</h5>
+<span class="text-left">Há alguns objetos nesse API:<ul>
+    <li>Reserve: Uma reserva cadastrada do que teremos que comprar no futuro</li>
+    <li>Prevision: Uma compra futura já estabelecida</li>
+    <li>Item: Os items cadatrados que são utilizados pelo comércio</li>
+    <li>Movement: A movimentação entre entrada e saída de items do estoque</li>
+    <li>Stock: O estoque propriamente dito.</li>
+</ul></span>
+<h3 class="text-center"></h3>
+<h3 class="text-center"></h3>
+<h4 class="text-center"></h4>
+
+<div class = "container">
+    <router-outlet></router-outlet>
+  </div>
+
+<footer class="footer, mt-auto">
+    <div class="container" class="text-center">
+      <span>All Rights Reserved 2023 @Maua Group Univesp</span>
+    </div>
+  </footer>

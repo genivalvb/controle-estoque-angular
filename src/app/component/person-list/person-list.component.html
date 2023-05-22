@@ -1,0 +1,43 @@
+<h5>Lista de Usuários</h5>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="stock"  class="nav-link"> Adicionar Usuário</a>
+        </li>
+        
+    </ul>
+  </nav>
+<table class= "table table-striped">
+  <thead>
+    <tr>
+      <th>ID:</th>
+      <th>Name:</th>
+      <th>Email:</th>
+      <th>Role:</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let person of people">
+      <td> {{ person.idPerson }}</td>
+      <td> {{ person.name }}</td>
+      <td> {{ person.mail }}</td>
+      <td> {{ person.roles.idRole }}</td>
+
+      <td>
+        <button (click) = "personDetails(person.idPerson)" class="btn btn-info" stye="margin-left: 10px">Update</button>
+      </td>
+      <td>
+      <td>
+        <button (click) = "personDetails(person.idPerson)" class="btn btn-info" stye="margin-left: 10px">Details</button>
+      </td>
+      <td>
+        <button (click) = "personDetails(person.idPerson)" class="btn btn-info" stye="margin-left: 10px">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

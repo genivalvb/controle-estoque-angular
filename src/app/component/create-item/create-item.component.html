@@ -1,0 +1,48 @@
+<div class="col-md-6 offset-md-3">
+<h3>Create Item</h3>
+
+<form (ngSubmit) = "onSubmit()">
+   <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id ="description" name="description" [(ngModel)] = "item.description" required>
+   </div> 
+
+   <div class="form-group">
+    <label for="code">Code</label>
+    <input type="text" class="form-control" id ="code" name="code" [(ngModel)] = "item.code" required>
+    </div> 
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id ="name" name="name" [(ngModel)] = "item.name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="ggroup">Group</label>
+        <input type="text" class="form-control" id ="ggroup" name="ggroup" [(ngModel)] = "item.ggroup" required>
+    </div>
+
+    <div class="form-group">
+        <label for="family">Family</label>
+        <input type="text" class="form-control" id ="family" name="family" [(ngModel)] = "item.family" required>
+    </div>
+
+    <div class="form-group">
+        <label for="unit">Unit</label>
+        <input type="text" class="form-control" id ="unit" name="unit" [(ngModel)] = "item.unit" required>
+    </div>
+
+    <div class="form-group">
+        <label for="stockSafe">Stock Safe</label>
+        <input type="text" class="form-control" id ="stockSafe" name="stockSafe" [(ngModel)] = "item.stockSafe" required>
+    </div>
+
+    <input type="submit" class="btn btn-primary mt-4" value="save">
+    <a href="#" class="btn btn-secondary mt-4 ml-2">Cancel</a>
+</form>
+
+
+</div>
+
+
+

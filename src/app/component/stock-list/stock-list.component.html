@@ -1,0 +1,59 @@
+<h5>Estoque</h5>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <!-- Brand -->
+  <ul class="navbar-nav">
+      <li class="nav-item">
+          <a routerLink="/consolidateStock"  class="nav-link">Consolidar Estoque</a>
+      </li>
+      <li class="nav-item">
+          <a routerLink="/stock"  class="nav-link">Inventário</a>
+      </li>
+  </ul>
+</nav>
+<table class= "table table-striped">
+  <thead>
+    <tr>
+      <th>ID:</th>
+      <th>Localization:</th>
+      <th>Estoque Real:</th>
+      <th>Estoque Futuro:</th>
+      <th>Data de Estoque Futuro:</th>
+      <th>Item Code:</th>
+      <th>Descrição:</th>
+      <th>Preço Unitátio:</th>
+      <th>Valor do Estoque:</th>
+      <th>Controle ABC:</th>
+      <th>% Acumulada:</th>
+      <th>Lot Economico:</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let stock of stocks">
+      <td> {{ stock.idStock }}</td>
+      <td> {{ stock.localization }}</td>
+      <td> {{ stock.realStock }}</td>
+      <td> {{ stock.futureStock }}</td>
+      <td> {{ stock.futureDate }}</td>
+      <td> {{ stock.item.code }}</td>
+      <td> {{ stock.description }}</td>
+      <td> R$ {{ stock.unitPrice }}</td>
+      <td> R$ {{ stock.stockValue }}</td>
+      <td> {{ stock.controlAbc }}</td>
+      <td> {{ stock.percentageAccumulated }} %</td>
+      <td> {{ stock.economicLot }}</td>
+      
+      <td>
+        <button (click) = "stockDetails(stock.idStock)" class="btn btn-info" stye="margin-left: 10px">Update</button>
+      </td>
+      <td>
+        <button (click) = "stockDetails(stock.idStock)" class="btn btn-info" stye="margin-left: 10px">Details</button>
+      </td>
+      <td>
+        <button (click) = "stockDetails(stock.idStock)" class="btn btn-info" stye="margin-left: 10px">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
